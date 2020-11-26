@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Voice Cloud</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="content-language" content="vi">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png"/>
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper.min.css">
+	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="./assets/scss/style.css">
+</head>
+<body>
+
+<header class="position-relative bg-white header">
+	<div class="header-top position-relative">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="header-top--left">
+						<ul class="list-unstyled mb-0 d-md-flex align-items-md-center justify-content-md-start">
+							<li>
+								Let's call together
+							</li>
+							<li>
+								<i class="fas fa-phone-alt"></i>
+								<a href="tel:19002028">
+									19002028
+								</a>
+							</li>
+							<li>
+								<i class="fas fa-envelope"></i>
+								<a href="mailto:admin@gmail.com">
+									admin@gmail.com
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="header-top--right">
+						<ul class="list-unstyled mb-0 d-md-flex align-items-md-center justify-content-md-end">
+							<li>
+								<a href="https://facebook.com">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://twiter.com">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://instagram.com">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6"></div>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom position-relative">
+		<div class="container">
+			<div class="row align-items-lg-center">
+				<div class="col-lg-3">
+					<div class="header-bottom-logo">
+						<a href="index.html">
+							<img src="./assets/images/logo.png" alt="Lorem ipsum dolor sit.">
+						</a>
+						<div id="hamburger" class="hamburger">
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="header-bottom-navigation">
+						<div class="header-overlay"></div>
+						<ul id="menu">
+							<li class="d-flex d-lg-none">
+								<a href="javascript:void(0)" id="close-menu"><i class="fal fa-times"></i></a>
+							</li>
+							<li class="active">
+								<a href="index.html">
+									Trang chủ
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Giới thiệu
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Dịch vụ
+								</a>
+							</li>
+							<!--
+							Có sub menu thì xài đoạn code này nha bình
+							Sub menu - Source PC -->
+							<li class="d-none d-lg-block">
+								<a href="javascript:void(0)">
+									Thiết bị
+									<i class="fal fa-angle-down"></i>
+								</a>
+								<ul class="d-none d-lg-block">
+									<li>
+										<a href="#">
+											Yealink
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Dinstar
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Newrock
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Plantronics
+										</a>
+									</li>
+								</ul>
+							</li>
+							<!-- Đóng Sub menu - PC -->
+							<!-- Sub menu - Source Mobile -->
+							<li class="d-block d-lg-none">
+								<a href="javascript:void(0)" data-toggle="collapse"
+								   data-target="#menu01">
+									Thiết bị
+									<i class="fal fa-angle-down"></i>
+								</a>
+								<ul id="menu01" class="collapse" data-parent="#menu">
+									<li>
+										<a href="#">
+											Yealink
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Dinstar
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Newrock
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Plantronics
+										</a>
+									</li>
+								</ul>
+							</li>
+							<!-- Đóng Sub menu - Mobile -->
+							<li>
+								<a href="#">
+									Khuyến mãi
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Tin tức
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Liên hệ
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="wrap-banner" style="background-image: url('./assets/images/background-banner.jpg')">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 banner-text">
+				<div class="content">
+					<div class="title">
+						<span>19002028</span>
+						Giải pháp tổng đài <br> cho doanh nghiệp
+					</div>
+					<div class="desc">
+						Tổng đài VoIP & Call Center
+					</div>
+					<div class="actions">
+						<a href="" class="btn btn-blue-light">
+							Dịch vụ <i class="fal fa-braille"></i>
+						</a>
+						<a href="" class="btn btn-orange-light">
+							Liên hệ
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 banner-image">
+				<div class="bg-wrapper">
+					<img src="./assets/images/banner-cloud.png" alt="">
+					<div class="bg-wrapper-box">
+						<img src="./assets/images/banner-cloud-block.png" alt="">
+						<img src="./assets/images/banner-cloud-block.png" alt="">
+						<img src="./assets/images/banner-cloud-block.png" alt="">
+						<img src="./assets/images/banner-cloud-block.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="wrap-scrollspy" id="scrollspy">
+	<ul class="list-unstyled mb-0">
+		<li>
+			<a href="#why">
+				<div class="scrollspy-item">
+					<div class="scrollspy-item--icon">
+						<img src="./assets/images/scrollspy/why.png" alt="">
+					</div>
+					<div class="scrollspy-item--text">
+						Vì sao chọn VoiceCloud
+					</div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#service">
+				<div class="scrollspy-item">
+					<div class="scrollspy-item--icon">
+						<img src="./assets/images/scrollspy/service.png" alt="">
+					</div>
+					<div class="scrollspy-item--text">
+						Dịch vụ VoiceCloud
+					</div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#aboutus">
+				<div class="scrollspy-item">
+					<div class="scrollspy-item--icon">
+						<img src="./assets/images/scrollspy/intro.png" alt="">
+					</div>
+					<div class="scrollspy-item--text">
+						Khuyến mãi của VoiceCloud
+					</div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#section06">
+				<div class="scrollspy-item">
+					<div class="scrollspy-item--icon">
+						<img src="./assets/images/scrollspy/cloud.png" alt="">
+					</div>
+					<div class="scrollspy-item--text">
+						Sở hữu VoiceCloud
+					</div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#partner">
+				<div class="scrollspy-item">
+					<div class="scrollspy-item--icon">
+						<img src="./assets/images/scrollspy/partner.png" alt="">
+					</div>
+					<div class="scrollspy-item--text">
+						Khách hàng tiêu biểu
+					</div>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+<div class="wrap-section wrap-why p-theme" id="why">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="heading">
+					Vì sao <span>chọn VoiceCloud</span>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-40 d-none d-lg-flex">
+			<div class="col-md-4 mb-30">
+				<div class="why-box">
+					<a href="" class="why-box-content">
+						<div class="why-box-content--icon">
+							<img src="./assets/images/services/no-money.png" alt="">
+						</div>
+						<div class="why-box-content--wrapper">
+							<div class="title">
+								Tiết kiệm
+							</div>
+							<div class="desc">
+								<p>
+									Gọi nội bộ 0 đồng giữa các chi nhánh, không giới hạn địa lý trên toàn Việt Nam
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-4 mb-30">
+				<div class="why-box">
+					<a href="" class="why-box-content">
+						<div class="why-box-content--icon">
+							<img src="./assets/images/services/no-money.png" alt="">
+						</div>
+						<div class="why-box-content--wrapper">
+							<div class="title">
+								Tiết kiệm
+							</div>
+							<div class="desc">
+								<p>
+									Gọi nội bộ 0 đồng giữa các chi nhánh, không giới hạn địa lý trên toàn Việt Nam
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-4 mb-30">
+				<div class="why-box">
+					<a href="" class="why-box-content">
+						<div class="why-box-content--icon">
+							<img src="./assets/images/services/no-money.png" alt="">
+						</div>
+						<div class="why-box-content--wrapper">
+							<div class="title">
+								Tiết kiệm
+							</div>
+							<div class="desc">
+								<p>
+									Gọi nội bộ 0 đồng giữa các chi nhánh, không giới hạn địa lý trên toàn Việt Nam
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-4 mb-30">
+				<div class="why-box">
+					<a href="" class="why-box-content">
+						<div class="why-box-content--icon">
+							<img src="./assets/images/services/no-money.png" alt="">
+						</div>
+						<div class="why-box-content--wrapper">
+							<div class="title">
+								Tiết kiệm
+							</div>
+							<div class="desc">
+								<p>
+									Gọi nội bộ 0 đồng giữa các chi nhánh, không giới hạn địa lý trên toàn Việt Nam
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-4 mb-30">
+				<div class="why-box">
+					<a href="" class="why-box-content">
+						<div class="why-box-content--icon">
+							<img src="./assets/images/services/no-money.png" alt="">
+						</div>
+						<div class="why-box-content--wrapper">
+							<div class="title">
+								Tiết kiệm
+							</div>
+							<div class="desc">
+								<p>
+									Gọi nội bộ 0 đồng giữa các chi nhánh, không giới hạn địa lý trên toàn Việt Nam
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-4 mb-30">
+				<div class="why-box">
+					<a href="" class="why-box-content">
+						<div class="why-box-content--icon">
+							<img src="./assets/images/services/no-money.png" alt="">
+						</div>
+						<div class="why-box-content--wrapper">
+							<div class="title">
+								Tiết kiệm
+							</div>
+							<div class="desc">
+								<p>
+									Gọi nội bộ 0 đồng giữa các chi nhánh, không giới hạn địa lý trên toàn Việt Nam
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="whyMobile">
+			<div class="card">
+				<div class="card-header">
+					<h5 class="mb-0">
+						<button class="btn btn-link" data-toggle="collapse" aria-expanded="true" data-target="#whybox-1">
+							Tiết kiệm
+							<i class="fal fa-angle-down"></i>
+						</button>
+					</h5>
+				</div>
+				
+				<div id="whybox-1" class="collapse show" data-parent="#whyMobile">
+					<div class="card-body">
+						<img src="./assets/images/services/no-money.png" alt="">
+						<p>
+							Gọi nội bộ 0 đồng giữa các chi nhánh, không giới hạn địa lý trên toàn Việt Nam
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<h5 class="mb-0">
+						<button class="btn btn-link" data-toggle="collapse" aria-expanded="false" data-target="#whybox-2">
+							Tiết kiệm
+							<i class="fal fa-angle-down"></i>
+						</button>
+					</h5>
+				</div>
+				<div id="whybox-2" class="collapse" data-parent="#whyMobile">
+					<div class="card-body">
+						<img src="./assets/images/services/no-money.png" alt="">
+						<p>
+							Gọi nội bộ 0 đồng giữa các chi nhánh, không giới hạn địa lý trên toàn Việt Nam
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<h5 class="mb-0">
+						<button class="btn btn-link" data-toggle="collapse" aria-expanded="false" data-target="#whybox-3">
+							Tiết kiệm
+							<i class="fal fa-angle-down"></i>
+						</button>
+					</h5>
+				</div>
+				<div id="whybox-3" class="collapse" data-parent="#whyMobile">
+					<div class="card-body">
+						<img src="./assets/images/services/no-money.png" alt="">
+						<p>
+							Gọi nội bộ 0 đồng giữa các chi nhánh, không giới hạn địa lý trên toàn Việt Nam
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="wrap-section wrap-service p-theme" id="service">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="heading">
+					Gói <span>Dịch vụ</span>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="swiper-container services-slide">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-img">
+										<img src="./assets/images/service.png" alt="Office 5">
+									</div>
+									<div class="card-title">
+										Office 5
+										<div class="decor">........</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<ul class="list-unstyled mb-0">
+										<li>
+											5 người dùng
+										</li>
+										<li>
+											Không giới hạn cuộc gọi đồng thời
+										</li>
+										<li>
+											Kết nối nhiều đầu số
+										</li>
+										<li>
+											Cung cấp tài khoản quản trị
+										</li>
+										<li>
+											Gọi nội bộ miễn phí
+										</li>
+										<li>
+											Ghi âm cuộc gọi
+										</li>
+										<li>
+											Tặng IVR lời chào tự động
+										</li>
+										<li>
+											Phòng họp thoại
+										</li>
+									</ul>
+								</div>
+								<div class="card-footer">
+									<a href="#" class="btn btn-orange">
+										Xem thêm
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-img">
+										<img src="./assets/images/service.png" alt="Office 10">
+									</div>
+									<div class="card-title">
+										Office 10
+										<div class="decor">........</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<ul class="list-unstyled mb-0">
+										<li>
+											5 người dùng
+										</li>
+										<li>
+											Không giới hạn cuộc gọi đồng thời
+										</li>
+										<li>
+											Kết nối nhiều đầu số
+										</li>
+										<li>
+											Cung cấp tài khoản quản trị
+										</li>
+										<li>
+											Gọi nội bộ miễn phí
+										</li>
+										<li>
+											Ghi âm cuộc gọi
+										</li>
+										<li>
+											Tặng IVR lời chào tự động
+										</li>
+										<li>
+											Phòng họp thoại
+										</li>
+									</ul>
+								</div>
+								<div class="card-footer">
+									<a href="#" class="btn btn-orange">
+										Xem thêm
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-img">
+										<img src="./assets/images/service.png" alt="Office 5">
+									</div>
+									<div class="card-title">
+										Call Center (Enterprise)
+										<div class="decor">........</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<ul class="list-unstyled mb-0">
+										<li>
+											5 người dùng
+										</li>
+										<li>
+											Không giới hạn cuộc gọi đồng thời
+										</li>
+										<li>
+											Kết nối nhiều đầu số
+										</li>
+										<li>
+											Cung cấp tài khoản quản trị
+										</li>
+										<li>
+											Gọi nội bộ miễn phí
+										</li>
+										<li>
+											Ghi âm cuộc gọi
+										</li>
+										<li>
+											Tặng IVR lời chào tự động
+										</li>
+										<li>
+											Phòng họp thoại
+										</li>
+									</ul>
+								</div>
+								<div class="card-footer">
+									<a href="#" class="btn btn-orange">
+										Xem thêm
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-img">
+										<img src="./assets/images/service.png" alt="Office 5">
+									</div>
+									<div class="card-title">
+										Office 5
+										<div class="decor">........</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<ul class="list-unstyled mb-0">
+										<li>
+											5 người dùng
+										</li>
+										<li>
+											Không giới hạn cuộc gọi đồng thời
+										</li>
+										<li>
+											Kết nối nhiều đầu số
+										</li>
+										<li>
+											Cung cấp tài khoản quản trị
+										</li>
+										<li>
+											Gọi nội bộ miễn phí
+										</li>
+										<li>
+											Ghi âm cuộc gọi
+										</li>
+										<li>
+											Tặng IVR lời chào tự động
+										</li>
+										<li>
+											Phòng họp thoại
+										</li>
+									</ul>
+								</div>
+								<div class="card-footer">
+									<a href="#" class="btn btn-orange">
+										Xem thêm
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-img">
+										<img src="./assets/images/service.png" alt="Office 10">
+									</div>
+									<div class="card-title">
+										Office 10
+										<div class="decor">........</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<ul class="list-unstyled mb-0">
+										<li>
+											5 người dùng
+										</li>
+										<li>
+											Không giới hạn cuộc gọi đồng thời
+										</li>
+										<li>
+											Kết nối nhiều đầu số
+										</li>
+										<li>
+											Cung cấp tài khoản quản trị
+										</li>
+										<li>
+											Gọi nội bộ miễn phí
+										</li>
+										<li>
+											Ghi âm cuộc gọi
+										</li>
+										<li>
+											Tặng IVR lời chào tự động
+										</li>
+										<li>
+											Phòng họp thoại
+										</li>
+									</ul>
+								</div>
+								<div class="card-footer">
+									<a href="#" class="btn btn-orange">
+										Xem thêm
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-img">
+										<img src="./assets/images/service.png" alt="Office 5">
+									</div>
+									<div class="card-title">
+										Call Center (Enterprise)
+										<div class="decor">........</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<ul class="list-unstyled mb-0">
+										<li>
+											5 người dùng
+										</li>
+										<li>
+											Không giới hạn cuộc gọi đồng thời
+										</li>
+										<li>
+											Kết nối nhiều đầu số
+										</li>
+										<li>
+											Cung cấp tài khoản quản trị
+										</li>
+										<li>
+											Gọi nội bộ miễn phí
+										</li>
+										<li>
+											Ghi âm cuộc gọi
+										</li>
+										<li>
+											Tặng IVR lời chào tự động
+										</li>
+										<li>
+											Phòng họp thoại
+										</li>
+									</ul>
+								</div>
+								<div class="card-footer">
+									<a href="#" class="btn btn-orange">
+										Xem thêm
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="wrap-section wrap-aboutus p-theme" id="aboutus">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="heading">
+					<span>Khuyến mãi</span><br/> Miễn phí chuyển Tổng đài Analog sang Tổng đài VoIP
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 order-md-1 order-1">
+				<div class="wrap-aboutus--left">
+					<iframe src="https://www.youtube.com/embed/koBIQBGtcag" frameborder="0"
+					        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					        allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-md-6 order-md-2 order-2">
+				<div class="wrap-aboutus--right">
+					<ul>
+						<li>
+							<i class="fal fa-lightbulb"></i>
+							Không giới hạn số lượng máy nhánh
+						</li>
+						<li>
+							<i class="fal fa-lightbulb"></i>
+							Kết nối 02 đầu số
+						</li>
+						<li>
+							<i class="fal fa-lightbulb"></i>
+							Hỗ trợ chuyển đổi đầu số Analog sang VoIP
+						</li>
+						<li>
+							<i class="fal fa-lightbulb"></i>
+							Ghi âm
+						</li>
+						<li>
+							<i class="fal fa-lightbulb"></i>
+							IVR Lời chào
+						</li>
+						<li>
+							<i class="fal fa-lightbulb"></i>
+							Hỗ trợ phí triển khai và cài đặt
+						</li>
+						<li>
+							<i class="fal fa-lightbulb"></i>
+							Hỗ trợ thiết bị (FXS, FXO) chuyển đổi hệ thống
+						</li>
+					</ul>
+					<div class="wrap-aboutus-readmore">
+						<a href="#" class="btn btn-orange">Xem chi tiết</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="wrap-section p-theme" id="section06">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="heading">
+					<span>Với 3 bước đơn giản</span> để sở hữu hệ thống tổng đài hiện đại nhất hiện nay
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 mb-15 md-mb-0">
+				<div class="box-item">
+					<div class="box-item--icon">
+						<i class="fas fa-phone-office"></i>
+					</div>
+					<div class="box-item--title">
+						<a href="#">Chọn đầu số điện thoại</a>
+					</div>
+					<div class="box-item--number">
+						<span>1</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-15 md-mb-0">
+				<div class="box-item">
+					<div class="box-item--icon">
+						<i class="fas fa-smog"></i>
+					</div>
+					<div class="box-item--title">
+						<a href="#">Chọn gói giải pháp VoiceCloud thích hợp</a>
+					</div>
+					<div class="box-item--number">
+						<span>2</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-15 md-mb-0">
+				<div class="box-item">
+					<div class="box-item--icon">
+						<i class="fas fa-phone-square-alt"></i>
+					</div>
+					<div class="box-item--title">
+						<a href="#">Chọn thiết bị nghe gọi tương thích</a>
+					</div>
+					<div class="box-item--number">
+						<span>3</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="wrap-section wrap-partner p-theme" id="partner">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="heading">
+					<span>Khách hàng</span> tiêu biểu
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="swiper-container partner-slide">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="row">
+								<div class="col-12 mb-30">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="row">
+								<div class="col-12 mb-30">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="row">
+								<div class="col-12 mb-30">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="row">
+								<div class="col-12 mb-30">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="row">
+								<div class="col-12 mb-30">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="row">
+								<div class="col-12 mb-30">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="row">
+								<div class="col-12 mb-30">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="partner-item">
+										<a href="">
+											<img src="./assets/images/partner/partner01.png" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="position-relative footer">
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="footer-logo">
+						<a href="index.html">
+							<img src="./assets/images/logo-footer.png" alt="">
+						</a>
+					</div>
+					<div class="footer-inner">
+						<div class="footer-inner--list">
+							<p class="title">
+								CÔNG TY TNHH TMDV CÔNG NGHỆ SONG THÀNH
+							</p>
+							<ul class="list-unstyled mb-0">
+								<li>
+									<i class="far fa-arrow-alt-circle-right"></i>
+									ĐC: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, provident?
+								</li>
+								<li>
+									<i class="far fa-arrow-alt-circle-right"></i>
+									ĐC: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, provident?
+								</li>
+								<li>
+									<i class="far fa-arrow-alt-circle-right"></i>
+									MST: 0312919582
+								</li>
+								<li>
+									<i class="far fa-arrow-alt-circle-right"></i>
+									Liên hệ: 1900 2028
+								</li>
+								<li>
+									<i class="far fa-arrow-alt-circle-right"></i>
+									Bấm phím 1: gặp phòng kỹ thuật
+								</li>
+								<li>
+									<i class="far fa-arrow-alt-circle-right"></i>
+									02871002028: gặp phòng Kinh Doanh
+								</li>
+								<li>
+									<i class="far fa-arrow-alt-circle-right"></i>
+									Email: info@voicecloud.vn
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="footer-inner">
+						<div class="footer-inner--list">
+							<p class="title">
+								Dịch vụ
+							</p>
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										Office
+									</a>
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										CallCenter
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-inner--list">
+							<p class="title">
+								Thiết bị
+							</p>
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										Yealink
+									</a>
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										Plantronics
+									</a>
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										Grandstream
+									</a>
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										Newrock
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-inner--list">
+							<p class="title">
+								Đầu số
+							</p>
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										FPT
+									</a>
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										CMC
+									</a>
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										Viettel
+									</a>
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										...
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="footer-inner">
+						<div class="footer-inner--list">
+							<p class="title">
+								Giới thiệu
+							</p>
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										Quy trình triển khai hệ thống tổng đài
+									</a>
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										Chính sách giao dịch và phương thức thanh toán
+									</a>
+								</li>
+								<li>
+									<a href="index.html">
+										<i class="far fa-arrow-alt-circle-right"></i>
+										Chính sách bảo vệ thông tin
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-inner--image">
+							<img src="./assets/images/bocongthuong.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="footer-inner">
+						<div class="footer-inner--listBlog">
+							<p class="title">Tin tức</p>
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="index.html">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									</a>
+								</li>
+								<li>
+									<a href="index.html">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, at culpa
+										eius error fuga laborum non possimus ratione sed tempore! </a>
+								</li>
+								<li>
+									<a href="index.html">
+										Lorem ipsum dolor sit amet.
+									</a>
+								</li>
+								<li>
+									<a href="index.html">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque facilis
+										nesciunt quibusdam?
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="copyright-inner text-center text-md-left">
+						© 2020 VoiceCloud. Design by <a href="https://facebook.com/thtan0407">TES</a>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="copyright-inner">
+						<ul class="list-unstyled mb-0 d-flex align-items-md-center justify-content-md-end justify-content-center">
+							<li>
+								<a href="https://facebook.com">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://twiter.com">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://instagram.com">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript" src="./assets/plugins/jquery-3-5-1.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/bootstrap/popper.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/theme-script.js"></script>
+</body>
+</html>

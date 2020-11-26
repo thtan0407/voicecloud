@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: $color-white;
+	font-size: 16px;
+}
+
+a, a:hover, a:focus {
+	box-shadow: none;
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+	@include transition(.2s all ease-out);
+}
+
+div, p, h1, h2, h3, h4, h5, blockquote, span, img, video {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+input,
+select,
+textarea {
+	@include transition(.2s all ease-out);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	box-shadow: none !important;
+	outline: none !important;
+}

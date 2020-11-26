@@ -1,0 +1,338 @@
+.header {
+	z-index: 10;
+	
+	&-top {
+		z-index: 1;
+		background: $color-dark;
+		color: $color-light;
+		
+		&--left {
+			> ul {
+				> li {
+					margin-right: 30px;
+					padding: 10px 0;
+					
+					&:last-of-type {
+						margin-right: 0;
+					}
+					
+					> a {
+						color: lighten($color-logo, 20%);
+						
+						> i {
+							margin-right: 4px;
+							font-size: .9em;
+						}
+						
+						&:hover {
+							color: lighten($color-logo, 30%);
+						}
+					}
+				}
+			}
+		}
+		
+		&--right {
+			> ul {
+				> li {
+					margin-left: 20px;
+					padding: 10px 0;
+					
+					&:first-of-type {
+						margin-left: 0;
+					}
+					
+					> a {
+						color: $color-light;
+					}
+				}
+			}
+		}
+		
+		@media screen and (max-width: 991px) {
+			display: none;
+		}
+	}
+	
+	&-bottom {
+		z-index: 2;
+		background: $color-main;
+		
+		&-logo {
+			@media screen and (max-width: 991px) {
+				padding: 10px 0;
+				position: relative;
+			}
+			
+			> a {
+				display: inline-block;
+				
+				> img {
+					max-width: 80%;
+					
+					@media screen and (max-width: 991px) {
+						max-width: 150px;
+					}
+				}
+			}
+			
+			.hamburger {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				display: block;
+				width: 24px;
+				height: 14px;
+				cursor: pointer;
+				@include transform(translateY(-50%));
+				z-index: 99999;
+				
+				@media screen and (min-width: 992px) {
+					display: none;
+				}
+				
+				&:before,
+				&:after,
+				span {
+					@include pseudo;
+					left: 0;
+					height: 2px;
+					width: 24px;
+					background: #fff;
+					@include transition(all 0.4s);
+				}
+				
+				span {
+					top: 50%;
+				}
+				
+				&:before {
+					top: 0;
+				}
+				
+				&:after {
+					bottom: -2px;
+				}
+			}
+		}
+		
+		&-navigation {
+			
+			> ul {
+				@media screen and (min-width: 992px) {
+					@include xy-position(center, flex-end);
+					list-style-type: none;
+					padding-left: 0;
+					margin-bottom: 0;
+					
+					> li {
+						position: relative;
+						
+						> a {
+							padding: 35px 20px;
+							@include xy-position(center, center);
+							color: $color-white;
+							font-weight: 400;
+							
+							> i {
+								margin-left: 5px;
+								@include transition(.2s all ease-out);
+							}
+						}
+						
+						> ul {
+							position: absolute;
+							opacity: 0;
+							visibility: hidden;
+							min-width: 250px;
+							width: max-content;
+							left: 0;
+							top: 140%;
+							list-style: none;
+							margin-bottom: 0;
+							padding-left: 0;
+							background: #f2f2f2;
+							border: 1px solid $color-border;
+							@include b-shadow(2px 2px 2px 0 rgba(0, 0, 0, 0.03));
+							@include transition(.3s all ease-out);
+							
+							> li {
+								> a {
+									padding: 10px 20px;
+									display: block;
+									border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+									@include transition(.2s all ease-out);
+									color: $color-dark;
+								}
+								
+								&:hover {
+									> a {
+										background: rgba(0, 0, 0, .03);
+										color: #000;
+									}
+								}
+							}
+						}
+						
+						&:hover,
+						&.active {
+							> a {
+								color: lighten($color-logo, 30%);
+								
+								> i {
+									@include transform(rotate(180deg));
+								}
+							}
+							
+							> ul {
+								top: 100%;
+								visibility: visible;
+								opacity: 1;
+							}
+						}
+						
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.header {
+		.header-bottom {
+			.header-bottom-navigation {
+				position: fixed;
+				z-index: 99999;
+				right: -200%;
+				top: 0;
+				height: 100%;
+				-webkit-transition: .3s all ease-out;
+				-o-transition: .3s all ease-out;
+				transition: .3s all ease-out;
+				visibility: hidden;
+				background: $color-main;
+				
+				> ul {
+					list-style-type: none;
+					margin-bottom: 0;
+					padding-left: 0;
+					position: relative;
+					width: 80vw;
+					z-index: 2;
+					overflow-x: hidden;
+					overflow-y: auto;
+					height: 100vh;
+					background-color: $color-main;
+					
+					> li {
+						position: relative;
+						
+						&:not(:first-of-type) {
+							border-top: 1px solid rgba(255, 255, 255, .03);
+						}
+						
+						&:first-of-type {
+							padding: 5px 10px;
+							justify-content: flex-end;
+							color: #fff;
+							font-size: 1.7em;
+							
+							> a {
+								padding: 10px 0 !important;
+							}
+						}
+						
+						> a {
+							@include xy-position(center, space-between);
+							color: #fff;
+							font-weight: 400;
+							padding: 11px 15px 10px;
+							font-size: .9em;
+							
+							> i {
+								@include transition(.2s all ease-out);
+							}
+						}
+						
+						> ul {
+							background: rgba(255, 255, 255, .025);
+							list-style-type: none;
+							margin-bottom: 0;
+							padding-left: 0;
+							
+							> li {
+								position: relative;
+								border-top: 1px solid rgba(255, 255, 255, .03);
+								
+								> a {
+									padding: 11px 15px 10px 35px;
+									display: block;
+									font-size: .9em;
+									color: #fff;
+								}
+							}
+						}
+						
+						&:hover,
+						&.active {
+							> a {
+								color: lighten($color-logo, 30%);
+								
+								> i {
+									@include transform(rotate(180deg));
+								}
+							}
+							
+						}
+					}
+				}
+			}
+		}
+		
+		.header-overlay {
+			width: 100vw;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: none;
+			z-index: 1;
+			background: rgba(0, 0, 0, .4);
+		}
+	}
+	.show_navigation {
+		.header {
+			.header-bottom {
+				.header-bottom-logo {
+					overflow: hidden;
+					
+					.hamburger {
+						span {
+							left: unset;
+							right: -400%;
+						}
+						
+						&:before {
+							top: 6px;
+							@include transform(rotate(135deg));
+						}
+						
+						&:after {
+							top: 6px;
+							@include transform(rotate(-135deg));
+						}
+					}
+				}
+				
+				.header-bottom-navigation {
+					right: 0;
+					visibility: visible;
+				}
+				.header-overlay {
+					display: block;
+				}
+			}
+		}
+	}
+}
