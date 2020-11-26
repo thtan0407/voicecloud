@@ -120,9 +120,50 @@
 		}
 	}
 	
+	.breadcrumb {
+		background: transparent;
+		padding: 0;
+		margin-top: 15px;
+		font-size: 18px;
+		
+		> a {
+			font-size: 1em;
+			color: darken($color-white, 10%);
+		}
+		
+		> span {
+			color: $color-white !important;
+			font-weight: 600;
+		}
+		
+		.breadcrumb-item {
+			& + .breadcrumb-item {
+				&::before {
+					background: transparent;
+					-moz-osx-font-smoothing: grayscale;
+					-webkit-font-smoothing: antialiased;
+					display: inline-block;
+					font-style: normal;
+					font-variant: normal;
+					text-rendering: auto;
+					font-weight: 300;
+					font-family: "Font Awesome 5 Pro";
+					content: "\f105";
+				}
+			}
+		}
+	}
+	
 	@media screen and (max-width: 991px) {
 		font-size: 1.2em;
 	}
+}
+
+.subHeading {
+	text-align: center;
+	font-size: 1.6em;
+	color: $color-main;
+	font-weight: 600;
 }
 
 .wrap-scrollspy {
@@ -477,8 +518,10 @@
 	
 	.card {
 		border: 0;
+		
 		.card-header {
 			padding: 5px 10px;
+			
 			h5 {
 				font-size: 1.1em;
 				
@@ -820,4 +863,328 @@
 	100% {
 		@include transform(rotateY(-45deg));
 	}
+}
+
+.childBanner {
+	padding: 70px 0;
+	
+	.heading {
+		text-align: left;
+		color: #fff;
+		margin-bottom: 0;
+		
+		span {
+			color: lighten($color-logo, 10%);
+			
+			&:before {
+				background: lighten($color-logo, 10%);
+			}
+		}
+	}
+}
+
+.page-contact {
+	background: #f5f5f5;
+	padding-bottom: 30px;
+	
+	.subHeading {
+		padding: 30px 0;
+	}
+	
+	.contact-top {
+		padding: 15px;
+		background: #fff;
+		border: 1px solid #c9c9c9;
+		margin-bottom: 30px;
+		
+		.contact-image {
+			padding: 30px 0;
+			height: 100%;
+			width: 100%;
+			background-color: #fff;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			
+			@media screen and (max-width: 768px) {
+				padding: 100px 0;
+			}
+		}
+		
+		.contact-info {
+			padding: 30px 0;
+			
+			> ul {
+				> li {
+					color: $color-dark;
+					
+					& + li {
+						margin-top: 20px;
+					}
+					
+					> ul {
+						@include xy-position(center, flex-start);
+						
+						> li {
+							margin-right: 10px;
+							
+							> a {
+								color: $color-dark;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		.contact-list {
+			padding: 30px 0;
+			
+			> ul {
+				> li {
+					color: $color-dark;
+					
+					& + li {
+						margin-top: 10px;
+						padding-top: 10px;
+						border-top: 1px solid #ddd;
+					}
+					
+					&:first-of-type {
+						font-size: 1.5em;
+						font-weight: 600;
+					}
+					
+					> i {
+						margin-right: 5px;
+						font-size: 1em;
+					}
+				}
+			}
+		}
+	}
+	
+	.contact-bottom {
+		background: $color-main;
+		padding-bottom: 20px;
+		
+		.subHeading {
+			color: #fff;
+		}
+		
+		.btn-blue-light {
+			margin-top: 30px;
+			padding: 8px 70px;
+		}
+		
+		@media screen and (max-width: 768px) {
+			.form-group {
+				padding: 0 15px;
+				margin-bottom: 0;
+				
+				.row {
+					> [class*=col] {
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.page-category {
+	padding: 30px 0;
+	background: #f5f5f5;
+	
+	.container {
+		> .row {
+			> [class*=col] {
+				margin-bottom: 25px;
+			}
+		}
+	}
+	
+	.blogItem {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		background: #fff;
+		border: 1px solid #ddd;
+		
+		.blog-header {
+			border: 4px solid #f5f5f5;
+			position: relative;
+			
+			.blog-image {
+				position: relative;
+				overflow: hidden;
+				
+				> a {
+					position: relative;
+					display: block;
+					width: 100%;
+					padding-top: 65%;
+					
+					> .decor {
+						@include pseudo;
+						top: 0;
+						left: 0;
+						z-index: 2;
+						width: 100%;
+						height: 100%;
+						background: rgba(255, 255, 255, .5);
+						-webkit-transition: all .3s ease-in-out;
+						transition: all .3s ease-in-out;
+						opacity: 0;
+					}
+					
+					> .image {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-size: cover;
+						background-repeat: no-repeat;
+						background-position: center;
+						-webkit-transition: all .3s ease-in-out;
+						transition: all .3s ease-in-out;
+					}
+				}
+			}
+			
+			.blog-links {
+				position: absolute;
+				bottom: -50%;
+				left: 0;
+				@include xy-position(center, space-between);
+				width: 100%;
+				background: rgba($color-logo, .8);
+				z-index: 3;
+				-webkit-transition: all .3s ease-in-out;
+				transition: all .3s ease-in-out;
+				
+				> a {
+					width: 50%;
+					padding: 15px 0;
+					color: #fff;
+					font-size: 1.2em;
+					@include xy-position(center, center);
+					
+					&:first-of-type {
+						border-right: 1px solid #ddd;
+					}
+				}
+			}
+			
+			
+			&:hover {
+				.blog-image {
+					position: relative;
+					overflow: hidden;
+					
+					> a {
+						> .decor {
+							opacity: 1;
+						}
+						
+						> .image {
+							height: 115%;
+							top: -15%;
+						}
+					}
+				}
+				
+				.blog-links {
+					bottom: 0;
+				}
+			}
+		}
+		
+		.blog-body {
+			position: relative;
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+			
+			.blog-title {
+				padding: 15px;
+				
+				> a {
+					color: $color-main;
+					font-size: 1.2em;
+					line-height: 1.3;
+					font-weight: 500;
+					@include text-line(2);
+					-webkit-transition: all .3s ease-in-out;
+					transition: all .3s ease-in-out;
+					
+					&:hover {
+						color: $color-logo;
+					}
+				}
+			}
+			
+			.blog-desc {
+				padding: 0 15px;
+				margin-bottom: 15px;
+				color: $color-gray;
+				font-size: .95em;
+				@include text-line(3);
+				
+				> p:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+			
+			.blog-action {
+				margin-top: auto;
+				background: rgba(0, 0, 0, .02);
+				padding: 7px 15px;
+				overflow: hidden;
+				text-align: right;
+				
+				> .blog-action-links {
+					display: inline-block;
+					padding-left: 15px;
+					border-left: 1px solid #ddd;
+					
+					> a {
+						color: $color-main;
+						-webkit-transition: all .3s ease-in-out;
+						transition: all .3s ease-in-out;
+						
+						&:hover {
+							color: $color-logo;
+						}
+						
+						> i {
+							margin-right: 4px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.pagination-wrapper .pagination li a {
+	outline: none;
+	box-shadow: none;
+	border-radius: 0 !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	color: #333;
+	height: 35px;
+	width: 35px;
+	padding-bottom: 10px;
+	transition: .2s all ease-in;
+	font-size: .9rem;
+	cursor: pointer;
+	margin: 0 3px;
 }

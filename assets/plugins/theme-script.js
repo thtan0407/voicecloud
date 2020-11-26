@@ -56,15 +56,17 @@ $(document).ready(function () {
 
     // ScrollSpy
 
-    let stickyOffset = $('#scrollspy').offset().top + 100;
+    if ($('#scrollspy').length) {
+        let stickyOffset = $('#scrollspy').offset().top + 100;
 
-    function addClassScrollSpy() {
-        let sticky = $('#scrollspy'),
-            scroll = $(window).scrollTop();
-        if (scroll >= stickyOffset) {
-            sticky.addClass('sticky');
-        } else {
-            sticky.removeClass('sticky');
+        function addClassScrollSpy() {
+            let sticky = $('#scrollspy'),
+                scroll = $(window).scrollTop();
+            if (scroll >= stickyOffset) {
+                sticky.addClass('sticky');
+            } else {
+                sticky.removeClass('sticky');
+            }
         }
     }
 
@@ -101,7 +103,7 @@ $(document).ready(function () {
 
     // Menu
     function callMenu() {
-        if($('body').hasClass('show_navigation')) {
+        if ($('body').hasClass('show_navigation')) {
             $('body').removeClass('show_navigation');
         } else {
             $('body').addClass('show_navigation');
