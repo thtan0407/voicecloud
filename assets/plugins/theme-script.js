@@ -114,4 +114,99 @@ $(document).ready(function () {
         callMenu();
     });
 
+    let avatar = $("#avatar .owl-carousel");
+    let thumbs = $("#thumb .owl-carousel");
+    let syncedSecondary = true;
+
+    avatar.owlCarousel({
+        items: 1,
+        slideSpeed: 1000,
+        nav: false,
+        autoplay: true,
+        dots: false,
+        loop: false,
+        autoplayTimeout: 10000,
+        responsiveRefreshRate: 200,
+        navText: [
+            '<i class="fal fa-chevron-left" aria-hidden="true"></i>',
+            '<i class="fal fa-chevron-right" aria-hidden="true"></i>'
+        ]
+    }).on("changed.owl.carousel", syncPosition);
+
+    thumbs.on("initialized.owl.carousel", function () {
+        thumbs
+            .find(".owl-item")
+            .eq(0)
+            .addClass("current");
+    }).owlCarousel({
+        items: 4,
+        dots: false,
+        nav: false,
+        smartSpeed: 200,
+        slideSpeed: 500,
+        statePadding: 3,
+        margin: 10,
+        slideBy: 4,
+        responsiveRefreshRate: 100,
+        responsive: {
+            0: {
+                items: 3,
+                slideBy: 3,
+            },
+            991: {
+                items: 4,
+                slideBy: 4,
+            }
+        }
+    }).on("changed.owl.carousel", syncPosition2);
+
+    function syncPosition(el) {
+        let count = el.item.count - 1;
+        let current = Math.round(el.item.index - el.item.count / 2 - 0.5);
+
+        if (current < 0) {
+            current = count;
+        }
+        if (current > count) {
+            current = 0;
+        }
+        thumbs
+            .find(".owl-item")
+            .removeClass("current")
+            .eq(current)
+            .addClass("current");
+        let onscreen = thumbs.find(".owl-item.active").length - 1;
+        let start = thumbs
+            .find(".owl-item.active")
+            .first()
+            .index();
+        let end = thumbs
+            .find(".owl-item.active")
+            .last()
+            .index();
+
+        if (current > end) {
+            thumbs.data("owl.carousel").to(current, 100, true);
+        }
+        if (current < start) {
+            thumbs.data("owl.carousel").to(current - onscreen, 100, true);
+        }
+    }
+
+    function syncPosition2(el) {
+        if (syncedSecondary) {
+            let number = el.item.index;
+            avatar.data("owl.carousel").to(number, 100, true);
+        }
+    }
+
+    thumbs.on("click", ".owl-item", function (e) {
+        e.preventDefault();
+        let number = $(this).index();
+        avatar.data("owl.carousel").to(number, 300, true);
+    });
+
+    if ($('[data-toggle="popover"]').length) {
+        $('[data-toggle="popover"]').popover();
+    }
 });
