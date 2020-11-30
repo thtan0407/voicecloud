@@ -3,6 +3,7 @@
 @import "helper";
 @import "header";
 @import "footer";
+@import "banner";
 @import "main";
 
 
@@ -142,6 +143,10 @@
 		font-weight: 400;
 		font-size: .5em;
 		color: $color-dark;
+		
+		@media screen and (max-width: 768px) {
+			font-size: .8em;
+		}
 	}
 	
 	.breadcrumb {
@@ -305,7 +310,7 @@
 	}
 }
 
-@keyframes left-to-right {
+@-webkit-keyframes left-to-right {
 	0% {
 		left: -30%;
 		opacity: 0;
@@ -318,154 +323,16 @@
 	}
 }
 
-.wrap-banner {
-	position: relative;
-	padding: 100px 0 30px;
-	background-color: $color-main;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	-webkit-background-size: cover;
-	background-size: cover;
-	overflow: hidden;
-	
-	@media screen and (max-width: 768px) {
-		padding: 50px 0;
-	}
-	
-	.content {
-		.title {
-			color: #fff;
-			font-size: 3.8em;
-			text-align: left;
-			line-height: 1.2;
-			
-			> span {
-				display: block;
-				color: lighten($color-logo, 30%);
-			}
-			
-			@media screen and (max-width: 768px) {
-				font-size: 1.4em;
-			}
-		}
-		
-		.desc {
-			margin: 30px 0 50px;
-			font-size: 1em;
-			color: $color-light;
-			
-			@media screen and (max-width: 768px) {
-				margin: 20px 0;
-			}
-		}
-	}
-	
-	.bg-wrapper {
-		position: relative;
-		width: 160%;
-		left: -40%;
-		top: -5%;
-		
-		@media screen and (max-width: 768px) {
-			//width: 100%;
-			left: 20%;
-			//top: 90px;
-			margin-top: -300px;
-		}
-		
-		> img {
-			width: 100%;
-		}
-		
-		.bg-wrapper-box {
-			position: absolute;
-			top: 50%;
-			@include transform(translateY(-50%));
-			
-			@media screen and (max-width: 768px) {
-				position: relative;
-				//top: unset;
-				//@include transform(translateY(0));
-			}
-			
-			> img {
-				position: absolute;
-				width: 120px;
-				
-				&:nth-of-type(1) {
-					top: -260px;
-					left: 305px;
-					animation: blockScrollTop 4s infinite;
-				}
-				
-				&:nth-of-type(2) {
-					top: -206px;
-					left: 222px;
-					animation: blockScrollTop 4s infinite;
-				}
-				
-				&:nth-of-type(3) {
-					top: -206px;
-					left: 392px;
-					animation: blockScrollTop 4s infinite 1s;
-				}
-				
-				&:nth-of-type(4) {
-					top: -151px;
-					left: 308px;
-					animation: blockScrollTop 4s infinite 1s;
-				}
-				
-				@media screen and (max-width: 768px) {
-					max-width: 250px;
-					width: calc(250px / 6);
-				}
-				
-				//@media screen and (max-width: 768px) {
-				//	max-width: 250px;
-				//	width: 15%;
-				//
-				//	&:nth-of-type(1) {
-				//		top: -110px;
-				//		left: 125px;
-				//	}
-				//
-				//	&:nth-of-type(2) {
-				//		top: -88px;
-				//		left: 90px;
-				//	}
-				//
-				//	&:nth-of-type(3) {
-				//		top: -67px;
-				//		left: 125px;
-				//	}
-				//
-				//	&:nth-of-type(4) {
-				//		top: -151px;
-				//		left: 308px;
-				//	}
-				//}
-			}
-		}
-	}
-	
-	@media screen and (max-width: 768px) {
-		.banner-text {
-			position: relative;
-			z-index: 2;
-		}
-	}
-}
-
-@keyframes blockScrollTop {
+@keyframes left-to-right {
 	0% {
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(-10px);
+		left: -30%;
+		opacity: 0;
+		visibility: hidden;
 	}
 	100% {
-		transform: translateY(0);
+		left: 0;
+		opacity: 1;
+		visibility: visible;
 	}
 }
 
@@ -896,6 +763,18 @@
 				animation: rotateImg 2s infinite;
 			}
 		}
+	}
+}
+
+@-webkit-keyframes rotateImg {
+	0% {
+		@include transform(rotateY(45deg))
+	}
+	50% {
+		@include transform(rotateY(0));
+	}
+	100% {
+		@include transform(rotateY(-45deg));
 	}
 }
 
@@ -1621,6 +1500,10 @@
 			border-radius: 6px;
 			background: #fff;
 			
+			@media screen and (max-width: 768px) {
+				margin-bottom: 15px;
+			}
+			
 			.card-body {
 				.card-title {
 					margin-bottom: 0;
@@ -1739,6 +1622,11 @@
 					padding: 10px 20px 10px 0;
 					color: $color-dark;
 					
+					@media screen and (max-width: 768px) {
+						width: 100%;
+						padding: 10px;
+					}
+					
 					> i {
 						color: $color-success;
 						font-size: 1.2em;
@@ -1781,12 +1669,21 @@
 			font-weight: 700;
 			font-size: 1.1em;
 			text-transform: uppercase;
+			
+			@media screen and (max-width: 768px) {
+				font-size: .95em;
+				white-space: nowrap;
+			}
 		}
 		
 		tr {
 			td {
 				vertical-align: middle;
-				color: lighten($color-dark, 15%)
+				color: lighten($color-dark, 15%);
+				
+				@media screen and (max-width: 768px) {
+					min-width: 150px;
+				}
 			}
 		}
 	}

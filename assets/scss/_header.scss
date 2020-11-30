@@ -69,6 +69,7 @@
 				
 				> img {
 					max-width: 80%;
+					@include transition(.2s all ease);
 					
 					@media screen and (max-width: 991px) {
 						max-width: 150px;
@@ -192,6 +193,42 @@
 							}
 						}
 						
+					}
+				}
+			}
+		}
+	}
+	
+	&.header-sticky {
+		position: fixed !important;
+		width: 100%;
+		top: 0;
+		z-index: 99999;
+		background: #fff;
+		box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+		border-bottom: 1px solid #d9d9d9;
+		
+		.header-top {
+			opacity: 0;
+			visibility: 0;
+			max-height: 0;
+		}
+		
+		.header-bottom {
+			.header-bottom-logo {
+				> a {
+					> img {
+						max-width: 50%;
+					}
+				}
+			}
+			
+			.header-bottom-navigation {
+				> ul {
+					> li {
+						> a {
+							padding: 20px;
+						}
 					}
 				}
 			}

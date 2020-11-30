@@ -10,8 +10,12 @@
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png"/>
 	<link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/slick/slick.min.css">
+	<link rel="stylesheet" href="./assets/plugins/slick/slick-theme.min.css">
+	<link rel="stylesheet" href="./assets/plugins/owlcarousel/owl.carousel.min.css">
 	<link rel="stylesheet" href="./assets/plugins/swiper/swiper.min.css">
 	<link rel="stylesheet" href="./assets/plugins/fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="./assets/plugins/animate.min.css">
 	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="./assets/scss/style.css">
 </head>
@@ -188,19 +192,26 @@
 	</div>
 </header>
 
-<div class="wrap-banner" style="background-image: url('./assets/images/background-banner.jpg')">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 banner-text">
-				<div class="content">
-					<div class="title">
-						<span>19002028</span>
-						Giải pháp tổng đài <br> cho doanh nghiệp
-					</div>
-					<div class="desc">
-						Tổng đài VoIP & Call Center
-					</div>
-					<div class="actions">
+<div class="wrap-banner banner__slider" id="banner">
+	<div class="slider stick-dots">
+		<div class="slide">
+			<div class="slide__img">
+				<img src="./assets/images/banner01.jpg" alt=""
+				     class="full-image"/>
+			</div>
+			<div class="slide__content slide__content__left animated" data-delay-in="0.1"
+			     data-animation-in="slideInLeft">
+				<div class="slide__content--headings text-left">
+					<p class="animated top-title"
+					   data-animation-in="fadeInRight"
+					   data-delay-in="0.3">
+						19002028
+					</p>
+					<h2 class="animated title"
+					    data-animation-in="fadeInRight">
+						Giải pháp tổng đài cho doanh nghiệp
+					</h2>
+					<div class="animated mt-30" data-animation-in="fadeInUp">
 						<a href="" class="btn btn-blue-light">
 							Dịch vụ <i class="fal fa-braille"></i>
 						</a>
@@ -210,14 +221,59 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 banner-image">
-				<div class="bg-wrapper">
-					<img src="./assets/images/banner-cloud.png" alt="">
-					<div class="bg-wrapper-box">
-						<img src="./assets/images/banner-cloud-block.png" alt="">
-						<img src="./assets/images/banner-cloud-block.png" alt="">
-						<img src="./assets/images/banner-cloud-block.png" alt="">
-						<img src="./assets/images/banner-cloud-block.png" alt="">
+		</div>
+		<div class="slide">
+			<div class="slide__img">
+				<img src="./assets/images/banner01.jpg" alt=""
+				     class="full-image"/>
+			</div>
+			<div class="slide__content slide__content__left animated" data-delay-in="0.1"
+			     data-animation-in="slideInLeft">
+				<div class="slide__content--headings text-left">
+					<p class="animated top-title"
+					   data-animation-in="fadeInRight"
+					   data-delay-in="0.3">
+						19002028
+					</p>
+					<h2 class="animated title"
+					    data-animation-in="fadeInRight">
+						Giải pháp tổng đài <br> cho doanh nghiệp
+					</h2>
+					<div class="animated" data-animation-in="fadeInUp">
+						<a href="" class="btn btn-blue-light">
+							Dịch vụ <i class="fal fa-braille"></i>
+						</a>
+						<a href="" class="btn btn-orange-light">
+							Liên hệ
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="slide__img">
+				<img src="./assets/images/banner01.jpg" alt=""
+				     class="full-image"/>
+			</div>
+			<div class="slide__content slide__content__left animated" data-delay-in="0.1"
+			     data-animation-in="slideInLeft">
+				<div class="slide__content--headings text-left">
+					<p class="animated top-title"
+					   data-animation-in="fadeInRight"
+					   data-delay-in="0.3">
+						19002028
+					</p>
+					<h2 class="animated title"
+					    data-animation-in="fadeInRight">
+						Giải pháp tổng đài <br> cho doanh nghiệp
+					</h2>
+					<div class="animated" data-animation-in="fadeInUp">
+						<a href="" class="btn btn-blue-light">
+							Dịch vụ <i class="fal fa-braille"></i>
+						</a>
+						<a href="" class="btn btn-orange-light">
+							Liên hệ
+						</a>
 					</div>
 				</div>
 			</div>
@@ -1256,14 +1312,25 @@
 	</div>
 </footer>
 
-<script type="text/javascript" src="./assets/plugins/jquery-3-5-1.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/slick/slick.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/slick/slick-animation.js"></script>
 <script type="text/javascript" src="./assets/plugins/bootstrap/popper.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/owlcarousel/owl.carousel.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/swiper/swiper.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/fancybox/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/theme-script.js"></script>
 
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0" nonce="LH88dxRW"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0"
+        nonce="LH88dxRW"></script>
+
+<a href="javascript:void(0)" id="return-to-top" style="display: none;">
+	<i class="far fa-long-arrow-alt-up"></i>
+</a>
+
+
+
 </body>
 </html>

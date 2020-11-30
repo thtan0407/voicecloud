@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     // Slide swiper.js
     let service = new Swiper('.services-slide', {
         loop: true,
@@ -74,7 +75,6 @@ $(document).ready(function () {
         $('.wrap-section').each(function () {
             var sectionId = $(this).attr('id');
             var navigationMatch = $('#scrollspy ul li a[href="#' + sectionId + '"]');
-            console.log(navigationMatch);
             if (($(this).offset().top - $(window).height() / 2 < $(window).scrollTop()) &&
                 ($(this).offset().top + $(this).height() - $(window).height() / 2 > $(window).scrollTop())) {
                 navigationMatch.closest('li').addClass('active');
@@ -114,6 +114,7 @@ $(document).ready(function () {
         callMenu();
     });
 
+
     let avatar = $("#avatar .owl-carousel");
     let thumbs = $("#thumb .owl-carousel");
     let syncedSecondary = true;
@@ -124,7 +125,7 @@ $(document).ready(function () {
         nav: false,
         autoplay: true,
         dots: false,
-        loop: false,
+        loop: true,
         autoplayTimeout: 10000,
         responsiveRefreshRate: 200,
         navText: [
@@ -206,7 +207,60 @@ $(document).ready(function () {
         avatar.data("owl.carousel").to(number, 300, true);
     });
 
+
+    $(window).scroll(function () {
+        let top = $(document).scrollTop();
+
+        if (top > 0) {
+            $('.header').addClass('header-sticky animated fadeInDown');
+        } else {
+            $('.header').removeClass('header-sticky animated fadeInDown');
+        }
+    });
+
     if ($('[data-toggle="popover"]').length) {
         $('[data-toggle="popover"]').popover();
     }
+
+    // Banner Effect
+    $('#banner .slider').slick({
+        autoplay: false,
+        speed: 3000,
+        autoplaySpeed: 12000,
+        lazyLoad: 'progressive',
+        arrows: true,
+        dots: false,
+        prevArrow: '<div class="slick-nav prev-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
+        nextArrow: '<div class="slick-nav next-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
+    }).slickAnimation();
+
+
+    $('#banner .slick-nav').on('click touch', function (e) {
+        e.preventDefault();
+        var arrow = $(this);
+        if (!arrow.hasClass('animate')) {
+            arrow.addClass('animate');
+            setTimeout(() => {
+                arrow.removeClass('animate');
+            }, 1600);
+        }
+    });
+
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#return-to-top').fadeIn();
+        } else {
+            $('#return-to-top').fadeOut();
+        }
+    });
+
+    $(document).on('click', '#return-to-top', function () {
+        $("html, body").animate({scrollTop: 0}, 600);
+        return false;
+    });
+
+    $('.callModal').click(function () {
+        $('#modalContact').modal('show');
+    })
 });
