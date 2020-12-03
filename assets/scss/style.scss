@@ -1708,3 +1708,56 @@
 	background: $color-logo;
 	color: #fff;
 }
+
+.page-Intro {
+	.intro-text {
+		.intro--inner {
+			h4 {
+				font-size: 1.4em;
+				line-height: 1.4;
+				color: $color-main;
+				margin-bottom: 20px;
+			}
+			
+			p:last-of-type {
+				margin-bottom: 0;
+			}
+			
+			h6 {
+				margin-top: 30px;
+				color: $color-gray;
+				font-size: 1.2em;
+			}
+		}
+	}
+	
+	.intro-middle {
+		.middle-box {
+			height: 100%;
+			@media screen and (max-width: 991px) {
+				margin-bottom: 25px;
+			}
+			
+			
+			h4 {
+				color: #fff;
+				font-size: 1.4em;
+				line-height: 1.4;
+				margin-bottom: 20px;
+				display: inline-block;
+				border-bottom: 4px solid #fff;
+			}
+			
+			p {
+				color: #f8f8f8;
+				line-height: 1.4;
+				font-size: .95em;
+				padding-right: 10px;
+			}
+			
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

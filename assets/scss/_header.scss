@@ -130,11 +130,11 @@
 						position: relative;
 						
 						> a {
-							padding: 35px 20px;
+							padding: 35px 15px;
 							@include xy-position(center, center);
 							color: $color-main;
 							font-weight: 400;
-							font-size: 1.1em;
+							font-size: 1em;
 							
 							> i {
 								margin-left: 5px;
@@ -370,6 +370,102 @@
 				
 				.header-overlay {
 					display: block;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.header-megaMenu {
+		> ul {
+			position: relative;
+			
+			> li {
+				position: static;
+				
+				> ul {
+					@include flex;
+					list-style-type: none;
+					padding-left: 0;
+					margin-bottom: 0;
+					min-width: 100%;
+					width: 100%;
+					background: #fff;
+					
+					> li:first-of-type {
+						width: 40%;
+					}
+					
+					> li:last-of-type {
+						width: 60%;
+						padding-left: 15px;
+						border-left: 1px solid $color-border;
+					}
+					
+					> li {
+						
+						> p {
+							color: $color-dark;
+							padding: 15px;
+						}
+						
+						> a {
+							font-weight: 500;
+							padding: 15px;
+							font-size: 16px;
+							letter-spacing: inherit;
+							color: #000;
+							position: relative;
+							margin: 0;
+							background: transparent !important;
+							text-transform: uppercase;
+							border-bottom: 0;
+							
+							&:before {
+								@include pseudo;
+								width: 55px;
+								border: .5px solid $color-main;
+								top: 45px;
+							}
+						}
+						
+						> ul {
+							@include flex;
+							list-style-type: none;
+							margin-bottom: 0;
+							padding: 10px;
+							flex-wrap: wrap;
+							
+							> li {
+								width: 33.33333%;
+								@include flex;
+								@include flex-direction(column);
+								
+								> a {
+									color: $color-dark;
+									font-size: 1em;
+									text-align: center;
+									font-weight: 700;
+									@include transition(.2s all ease-out);
+									
+									img {
+										display: block;
+										height: 70px;
+										margin: 10px auto;
+										width: auto;
+										vertical-align: middle;
+									}
+								}
+								
+								&:hover {
+									> a {
+										color: $color-main;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}

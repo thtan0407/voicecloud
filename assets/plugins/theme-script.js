@@ -55,6 +55,33 @@ $(document).ready(function () {
         }
     });
 
+    let action = new Swiper('.action-slide', {
+        loop: true,
+        slidesPerView: 6,
+        autoplay: {
+            delay: 7500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 30,
+            },
+        }
+    });
+
     // ScrollSpy
 
     if ($('#scrollspy').length) {
